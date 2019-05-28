@@ -4,6 +4,7 @@
         class="placeholder" alt="Vue logo"
         src="../assets/placeholder-gif.png">
     <div class="monologue" v-if="isManifesto">
+      <h1>Hello world</h1>
       <div v-for="sentence in texts">
         <p v-for="text in sentence">{{text}}</p>
       </div>
