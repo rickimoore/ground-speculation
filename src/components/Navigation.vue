@@ -19,9 +19,9 @@
             </div>
         </div>
         <div class="nav_bar bottom_nav">
-            <div class="link">
+            <router-link class="router-link" to="/archive">
                 <p v-bind:class="{ dark: isDark }">Soil Archive</p>
-            </div>
+            </router-link>
             <router-link class="router-link" to="/knowledge">
                 <p v-bind:class="{ dark: isDark }">Knowledge</p>
             </router-link>
