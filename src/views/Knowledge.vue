@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <carousel :perPage="1" :navigationEnabled="false" style="width: 100%">
+        <carousel :perPage="1" :navigationEnabled="false" :paginationEnabled="false" style="width: 100%; margin-top: 100px">
             <slide v-for="slide in slideShow">
                 <div class="slide--content">
                     <div class="slide--image">
@@ -13,20 +13,20 @@
                             <p class="slide--data-text">{{slide.text}}</p>
                         </div>
                     </div>
-                    <div class="slide--controls">
-                        <div class="toggle">
-                            <p class="option"
-                               v-on:click="isOverlay = true"
-                               v-bind:class="{ active: isOverlay }">On</p>
-                            <span>/</span>
-                            <p class="option"
-                               v-on:click="isOverlay = false"
-                               v-bind:class="{ active: !isOverlay }">Off</p>
-                        </div>
-                    </div>
                 </div>
             </slide>
         </carousel>
+        <div class="slide--controls">
+            <div class="toggle">
+                <p class="option"
+                   v-on:click="isOverlay = true"
+                   v-bind:class="{ active: isOverlay }">On</p>
+                <span>/</span>
+                <p class="option"
+                   v-on:click="isOverlay = false"
+                   v-bind:class="{ active: !isOverlay }">Off</p>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -114,11 +114,9 @@
         pointer-events: none;
     }
     .slide--controls {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
         width: 200px;
-        margin-left: -100px;
+        position: relative;
+        z-index: 999;
     }
     .toggle {
         display: flex;
@@ -129,6 +127,9 @@
     .option {
         padding: 10px;
         cursor: pointer;
+    }
+    .VueCarousel-navigation button {
+        background-color: red;
     }
     .active {
         text-decoration: underline;
