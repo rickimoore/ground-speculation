@@ -20,6 +20,7 @@
 </script>
 
 <style>
+  @import "./assets/fonts/fonts.css";
   html, body {
     height: 100%;
     width: 100%;
@@ -42,5 +43,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  p {
+    font-family: 'TheSans', sans-serif;
   }
 </style>

@@ -2,13 +2,13 @@
   <div class="home">
     <img v-on:click="viewManifesto()" v-if="!isManifesto"
         class="placeholder" alt="Vue logo"
-        src="../assets/placeholder-gif.png">
-    <div class="monologue" v-if="isManifesto">
-      <div v-for="sentence in texts">
-        <p v-for="text in sentence">{{text}}</p>
+        src="../assets/chromas_start.gif">
+    <div v-if="isManifesto">
+      <div v-for="(sentence, index) in texts" v-bind:key="index">
+        <p v-bind:key="index2" class="monologue" v-for="(text, index2) in sentence">{{text}}</p>
       </div>
       <router-link to="/map">
-        <p>Map</p>
+        <img class="next-logo" src="../assets/arrow.png">
       </router-link>
     </div>
   </div>
@@ -50,5 +50,11 @@ export default {
   }
   .placeholder {
     width: 50%
+  }
+  .monologue {
+    font-family: Adobe Garamond Pro, sans-serif;
+  }
+  .next-logo{
+    width: 50px;
   }
 </style>

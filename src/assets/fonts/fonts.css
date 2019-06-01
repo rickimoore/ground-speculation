@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'TheSans';
+  src: url('./TheSans-BoldPlain.eot');
+  src: url('./TheSans-BoldPlain.eot?#iefix') format('embedded-opentype'),
+  url('./TheSans-BoldPlain.woff2') format('woff2'),
+  url('./TheSans-BoldPlain.woff') format('woff'),
+  url('./TheSans-BoldPlain.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheSans';
+  src: url('./TheSans-Regular.eot');
+  src: url('./TheSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./TheSans-Regular.woff2') format('woff2'),
+  url('./TheSans-Regular.woff') format('woff'),
+  url('./TheSans-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('./AGaramondPro-Regular.eot');
+  src: url('./AGaramondPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./AGaramondPro-Regular.woff2') format('woff2'),
+  url('./AGaramondPro-Regular.woff') format('woff'),
+  url('./AGaramondPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

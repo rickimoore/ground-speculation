@@ -32,7 +32,7 @@
 <script>
   import { Carousel, Slide } from 'vue-carousel';
     export default {
-      name: 'knowledge',
+      name: 'participate',
       components: {
         Carousel,
         Slide

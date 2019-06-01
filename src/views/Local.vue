@@ -17,7 +17,7 @@
       data: () => {
         return {
           slideShow: [
-            require('../assets/topview-grid-footage.png'),
+            require('../assets/chromas.gif'),
             require('../assets/topview-footage-1.png'),
             require('../assets/topview-footage-2.png'),
             require('../assets/topview-footage-3.png')
@@ -29,6 +29,6 @@
 </script>
 <style scoped>
     .slide_image {
-        width: 650px
+        width: 700px
     }
 </style>
