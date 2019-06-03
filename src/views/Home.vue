@@ -7,7 +7,7 @@
       <div v-for="(sentence, index) in texts" v-bind:key="index">
         <p v-bind:key="index2" class="monologue" v-for="(text, index2) in sentence">{{text}}</p>
       </div>
-      <router-link to="/map">
+      <router-link to="/global">
         <img class="next-logo" src="../assets/arrow.png">
       </router-link>
     </div>
