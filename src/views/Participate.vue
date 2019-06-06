@@ -10,6 +10,7 @@
                         <img  v-if="isOverlay" class="slide_overlay" alt="ground image" src="../assets/Dipperz_Germany_0.png">
                         <img class="slide_image" alt="ground image" :src="slide.image">
                         <div class="slide--data off-slide">
+                            <h3 v-if="slide.subTitle" class="slide--sub-title">{{slide.subTitle}}</h3>
                             <p class="slide--data-text">{{slide.text}}</p>
                         </div>
                     </div>
@@ -42,25 +43,37 @@
           isOverlay: false,
           slideShow: [
             {
-              title: 'Color',
-              image: require('../assets/color_placeholder.png'),
+              title: 'Size Ratio',
+              image: require('../assets/tool_ratio1.png'),
               overlay: require('../assets/placeholder-chroma.png'),
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex '
+              text: 'The wideness of the zones should be in ratio with each other at a balanced soil. If one zone is small or narrow and the other one is wide or large, then the chroma, and thus the soil is out of balance. A chroma with a good spreading of the zones is an indication of a balanced soil.'
             },
             {
-              title: 'Width',
-              image: require('../assets/width_placeholder.png'),
+              title: 'Color',
+              subTitle: 'General Soil Fertility',
+              image: require('../assets/tool_color.png'),
               overlay: require('../assets/placeholder-chroma.png'),
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex '
+              text: 'Looking at the colour of the central zone, the general fertility of the soil can be evaluated. A fairly white zone speaks for a very fertile soil, a creamy to light beige coloured zone references an average fertility. If the zone is rather dark, this could point out a chemically threatened soil.'
+            },
+            {
+              title: 'Color',
+              image: require('../assets/tool_color2.png'),
+              overlay: require('../assets/placeholder-chroma.png'),
+              text: 'Desirable colours for the inner and intermediate zone range from cream, light brown, beige to orange and red. Those colours refer to a healthy soil, whereas dark, ash colours or violet tones reveal a disturbance in the soil.'
+            },
+            {
+              title: 'Color',
+              subTitle: 'Condition of humus',
+              image: require('../assets/tool_color3.png'),
+              overlay: require('../assets/placeholder-chroma.png'),
+              text: 'If the external zone displays a dark brown , closed edge, the soil contains raw or burned organic matter. Stable humus is indicated by a light brown, beige colour in the shape of small clouds sitting on top of the formed prickles.'
             },
             {
               title: 'Pattern',
-              image: require('../assets/pattern_placeholder.png'),
+              subTitle: 'quality of soil life',
+              image: require('../assets/tool_pattern.png'),
               overlay: require('../assets/placeholder-chroma.png'),
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex '
+              text: 'Besides colour and size, the formed edge of the intermediate zone also reveals information about the status of life within the soil. If it is evenly covered with prickles, the soil microorganisms are active. The more vibrant and dynamic this pattern is taking shape, the more activity can be found in the soil.'
             }
           ]
         }
@@ -69,7 +82,7 @@
 </script>
 <style scoped>
     .page {
-        background-color: #1E1E1E;
+        background-color: #1A1818;
         color: white;
     }
     .slide--content {
@@ -105,18 +118,23 @@
         pointer-events: none;
     }
     .slide_overlay {
-        width: 40%;
+        width: 43%;
         position: absolute;
         left: 50%;
-        margin-left: -20%;
-        opacity: .6;
-        top: 0;
+        margin-left: -21%;
+        opacity: .9;
+        top: -5%;
         pointer-events: none;
     }
     .slide--controls {
         width: 200px;
         position: relative;
         z-index: 999;
+    }
+    .slide--sub-title{
+        text-align: left;
+        width: 100%;
+        text-transform: uppercase;
     }
     .toggle {
         display: flex;
