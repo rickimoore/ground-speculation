@@ -90,7 +90,7 @@
     }
     .link {
         position: relative;
-        max-height: 50px;
+        height: 50px;
     }
     .nav_bar {
         display: flex;

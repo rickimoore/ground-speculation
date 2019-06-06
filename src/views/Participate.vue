@@ -5,7 +5,7 @@
                 <div class="slide--content">
                     <div class="slide--image">
                         <div class="slide--title off-slide">
-                            <p>{{slide.title}}</p>
+                            <p class="slide--sub-title">{{slide.title}}</p>
                         </div>
                         <img  v-if="isOverlay" class="slide_overlay" alt="ground image" src="../assets/Dipperz_Germany_0.png">
                         <img class="slide_image" alt="ground image" :src="slide.image">
@@ -151,5 +151,8 @@
     }
     .active {
         text-decoration: underline;
+    }
+    h3 {
+        font-family: 'TheSans', sans-serif;
     }
 </style>

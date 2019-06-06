@@ -9,7 +9,7 @@
                 </div>
                 <div class="chroma--upload">
                     <div class="upload--image"></div>
-                    <h1>Upload</h1>
+                    <p class="slide--sub-title">Upload <br> Chroma</p>
                 </div>
             </div>
         </div>
@@ -129,5 +129,9 @@
         left: 0;
         right: 0;
         cursor: pointer;
+    }
+    .slide--sub-title{
+        text-transform: uppercase;
+        font-size: 13px;
     }
 </style>
