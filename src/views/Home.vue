@@ -23,7 +23,7 @@ export default {
     return {
       isManifesto: false,
       texts: [
-        ['soil', 'is a heritable right ', 'to all mankind.'],
+        ['Soil', 'is a heritable right ', 'to all mankind.'],
         ['It must not be', 'a commodity, nor ', 'object of', 'speculation.'],
         ['It is owned by', 'no one and shared', 'by everyone.'],
         ['Soil', 'is unappropriatable.', 'it is a collective good.'],
@@ -53,6 +53,7 @@ export default {
   }
   .monologue {
     font-family: Adobe Garamond Pro, sans-serif;
+    font-size: 36px;
   }
   .next-logo{
     width: 50px;
