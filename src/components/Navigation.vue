@@ -2,49 +2,49 @@
     <div class="nav">
         <div class="nav_bar top_nav">
             <div class="link"
-                 @mouseover="hoverLink = 'map'"
+                 @mouseover="hoverLink = '/global'"
                  @mouseleave="hoverLink = null">
                 <router-link class="router-link" to="/global">
                     <p v-bind:class="{ dark: isDark }">Global</p>
-                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === 'map' || hoverLink === 'map'">
+                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === '/global' || hoverLink === '/global'">
                 </router-link>
             </div>
             <div class="logo">
-                <router-link v-if="currentRoute !== 'local'" class="router-link" to="/about/grounds">
+                <router-link v-if="currentRoute !== '/local' && currentRoute !== '/about/soil'" class="router-link" to="/about/grounds">
                     <img v-if="!isDark" class="nav_logo" alt="Vue logo" src="../assets/logo_GOS.png">
                     <img v-if="isDark" class="nav_logo" alt="Vue logo" src="../assets/logo_GOS_white.png">
                 </router-link>
-                <router-link v-if="!isDark && currentRoute === 'local'" class="router-link" to="/about/soil">
+                <router-link v-if="!isDark && currentRoute === '/local' || currentRoute === '/about/soil'" class="router-link" to="/about/soil">
                     <img class="nav_logo" alt="Vue logo" src="../assets/logo_SIR placeholder.png">
                 </router-link>
             </div>
             <div class="link"
-                 @mouseover="hoverLink = 'local'"
+                 @mouseover="hoverLink = '/local'"
                  @mouseleave="hoverLink = null"
             >
                 <router-link class="router-link" to="/local">
                     <p v-bind:class="{ dark: isDark }">Local</p>
-                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === 'local' || hoverLink === 'local'">
+                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === '/local' || hoverLink === '/local'">
                 </router-link>
             </div>
         </div>
         <div class="nav_bar bottom_nav">
             <div class="link"
-                 @mouseover="hoverLink = 'archive'"
+                 @mouseover="hoverLink = '/archive'"
                  @mouseleave="hoverLink = null"
             >
                 <router-link class="router-link" to="/archive">
                     <p v-bind:class="{ dark: isDark }">Soil Archive</p>
-                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === 'archive' || hoverLink === 'archive'">
+                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === '/archive' || hoverLink === '/archive'">
                 </router-link>
             </div>
             <div class="link"
-                 @mouseover="hoverLink = 'participate'"
+                 @mouseover="hoverLink = '/participate'"
                  @mouseleave="hoverLink = null"
             >
                 <router-link class="router-link" to="/participate">
                     <p v-bind:class="{ dark: isDark }">participate</p>
-                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === 'participate' || hoverLink === 'participate'">
+                    <hr v-bind:class="{ dark: isDark }" v-if="!hoverLink && currentRoute === '/participate' || hoverLink === '/participate'">
                 </router-link>
             </div>
         </div>
@@ -63,9 +63,12 @@
       },
       watch:{
         $route (to){
-          this.currentRoute = to.name;
+          this.currentRoute = to.fullPath;
           this.isDark = to.name === 'participate'
         }
+      },
+      mounted(){
+        this.currentRoute = this.$route.fullPath;
       }
     }
 </script>
